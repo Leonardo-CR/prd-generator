@@ -24,9 +24,9 @@ MVPs, user stories, and technical specs without re-asking the user for clarifica
 
 ## Phase 1: Elicitation
 
-Run a structured interview with the user. Ask the questions below **grouped by
-category**, in a conversational tone. Do NOT ask all at once — present 2-3 groups,
-wait for answers, then continue.
+Run a structured interview with the user. Ask the questions below **one group at a
+time**, in a conversational tone. Present ONE group, wait for the user's answers,
+then move to the next group. NEVER present more than one group per message.
 
 Adapt language to the user's technical level. If they answer briefly, ask one
 follow-up to extract more detail. If they answer extensively, skip follow-ups.
@@ -242,7 +242,9 @@ After generating the PRD:
 
 - Output the PRD as a raw Markdown code block so the user can copy it directly.
 - Also save it as a `.md` file if file tools are available.
-- File name: `PRD-{project-name-kebab-case}.md`
+- Save the file at the project root inside a folder called `prd-generator-utils/`.
+  Create the folder if it does not exist.
+- File path: `prd-generator-utils/PRD-{project-name-kebab-case}.md`
 - Always include the YAML frontmatter — downstream AI uses it to know which
   pipeline stage produced this document.
 - Never truncate sections. If information is missing, write `> No definido aún.`
